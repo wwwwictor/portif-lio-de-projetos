@@ -1,0 +1,50 @@
+import tkinter as tk
+
+# Lista de flashcards: (pergunta, resposta)
+flashcards = [
+    ("O que é CSS?", "Folhas de estilo para páginas HTML."),
+    ("Para que serve o JavaScript?", "Adiciona interatividade a páginas."),
+    ("O que é uma variável?", "Espaço de memória para guardar valores."),
+    ("O que faz console.log()?", "Exibe algo no console do navegador.")
+]
+
+current = 0
+showing_answer = False
+
+def flip_card():
+    global showing_answer
+    showing_answer = not showing_answer
+    update_card()
+
+def next_card():
+    global current, showing_answer
+    current = (current + 1) % len(flashcards)
+    showing_answer = False
+    update_card()
+
+def update_card():
+    text = flashcards[current][1] if showing_answer else flashcards[current][0]
+    label.config(text=text)
+
+# Criação da janela
+root = tk.Tk()
+root.title("Flashcards")
+root.geometry("400x250")
+root.resizable(False, False)
+
+# Elementos da interface
+label = tk.Label(root, text="", font=("Arial", 16), wraplength=350, justify="center", padx=20, pady=40)
+label.pack()
+
+btn_flip = tk.Button(root, text="Virar", command=flip_card)
+btn_flip.pack(pady=5)
+
+btn_next = tk.Button(root, text="Próxima", command=next_card)
+btn_next.pack(pady=5)
+
+# Mostrar o primeiro card
+update_card()
+
+# Iniciar app
+root.mainloop()
+
