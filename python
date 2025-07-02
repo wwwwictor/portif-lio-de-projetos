@@ -32,8 +32,13 @@ root.title("Flashcards")
 root.geometry("400x250")
 root.resizable(False, False)
 
+# Carregar a imagem de fundo
+bg_image = tk.PhotoImage(file="fundo.png")  # Substitua com o caminho correto
+bg_label = tk.Label(root, image=bg_image)
+bg_label.place(relwidth=1, relheight=1)  # Faz a imagem cobrir toda a janela
+
 # Elementos da interface
-label = tk.Label(root, text="", font=("Arial", 16), wraplength=350, justify="center", padx=20, pady=40)
+label = tk.Label(root, text="", font=("Arial", 16), wraplength=350, justify="center", padx=20, pady=40, bg="white")
 label.pack()
 
 btn_flip = tk.Button(root, text="Virar", command=flip_card)
@@ -47,4 +52,5 @@ update_card()
 
 # Iniciar app
 root.mainloop()
+
 
