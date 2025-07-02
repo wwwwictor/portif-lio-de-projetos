@@ -6,7 +6,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #add441;
+      background: url('circulo-azul-abstrato-na-tecnologia-de-fundo-preto_1142-12714.avif') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -39,57 +40,59 @@
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
-      border: 1px solid #000000;
+      border: 1px solid #e9e9e9;
       border-radius: 20px;
-      background: rgb(255, 255, 255);
+      background: rgba(52, 208, 255, 0.9);
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       font-size: 18px;
       padding: 9px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 5px rgba(77, 60, 60, 0.15);
     }
 
     .card-back {
       transform: rotateY(180deg);
-      background-color: #e9e9e9;
+      background-color: rgba(233, 233, 233, 0.9);
     }
   </style>
 </head>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-inner">
-    <div class="card-front">Quantos habitantes tem no Brasil?</div>
-    <div class="card-back">211 milhões.</div>
+<body>
+
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-inner">
+      <div class="card-front">Quantos habitantes tem no Brasil?</div>
+      <div class="card-back">211 milhões.</div>
+    </div>
   </div>
-</div>
 
-
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-inner">
-    <div class="card-front">Qual a segunda Lei de Newton?</div>
-    <div class="card-back"> Princípio fundamental da dinâmica.</div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-inner">
+      <div class="card-front">Qual a segunda Lei de Newton?</div>
+      <div class="card-back">Princípio fundamental da dinâmica.</div>
+    </div>
   </div>
-</div>
 
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-inner">
-    <div class="card-front">Quantos ossos possui o corpo humano adulto?</div>
-    <div class="card-back">206 ossos.</div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-inner">
+      <div class="card-front">Quantos ossos possui o corpo humano adulto?</div>
+      <div class="card-back">206 ossos.</div>
+    </div>
   </div>
-</div>
 
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-inner">
-    <div class="card-front">Qual a capital de Rondonia</div>
-    <div class="card-back">Porto Velho.</div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-inner">
+      <div class="card-front">Qual a capital de Rondônia?</div>
+      <div class="card-back">Porto Velho.</div>
+    </div>
   </div>
-</div>
 
-<script>
-  function flipCard(card) {
-    card.classList.toggle("flipped");
-  }
-</script>
+  <script>
+    function flipCard(card) {
+      card.classList.toggle("flipped");
+    }
+  </script>
 
+</body>
 </html>
